@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="WMZ\ForceLogin\Block\Account\AuthorizationLink"
+                   name="wmz-authorization-link-login"
+                   template="WMZ_ForceLogin::account/link/authorization.phtml"/>
+            <referenceBlock name="authorization-link-login" remove="true"/>
+        </referenceBlock>
+    </body>
+</page>

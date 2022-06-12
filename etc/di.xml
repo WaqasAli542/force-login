@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin name="wmz_productpage_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Product\View"/>
+    </type>
+    <type name="Magento\Catalog\Controller\Category\View">
+        <plugin name="wmz_categorypage_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Category\View"/>
+    </type>
+    <type name="Magento\Checkout\Controller\Cart\Index">
+        <plugin name="wmz_cart_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Cart\Index"/>
+    </type>
+    <type name="Magento\Checkout\Controller\Index\Index">
+        <plugin name="wmz_checkout_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Index\Index"/>
+    </type>
+    <type name="Magento\Contact\Controller\Index\Index">
+        <plugin name="wmz_contact_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Contact\Index"/>
+    </type>
+    <type name="Magento\Sales\Controller\Guest\Form">
+        <plugin name="wmz_sales_order_return" sortOrder="10" type="WMZ\ForceLogin\Plugin\Guest\Form"/>
+    </type>
+    <type name="Magento\Search\Controller\Term\Popular">
+        <plugin name="wmz_search_term_login" sortOrder="10"
+                type="WMZ\ForceLogin\Plugin\Search\Term\Popular"/>
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Result\Index">
+        <plugin name="wmz_search_result_login" sortOrder="10"
+                type="WMZ\ForceLogin\Plugin\CatalogSearch\Result\Index"/>
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Advanced\Index">
+        <plugin name="wmz_search_advanced_login" sortOrder="10"
+                type="WMZ\ForceLogin\Plugin\CatalogSearch\Advanced\Index"/>
+    </type>
+    <type name="Magento\Customer\Controller\Account\LoginPost">
+        <plugin name="wmz_redirect_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Customer\LoginPost"/>
+    </type>
+    <type name="Magento\Cms\Controller\Page\View">
+        <plugin name="wmz_cms_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Cms\Page\View"/>
+    </type>
+    <type name="Magento\Cms\Controller\Noroute\Index">
+        <plugin name="wmz_404_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Cms\Noroute\Index"/>
+    </type>
+    <type name="Magento\Cms\Controller\Index\Index">
+        <plugin name="wmz_homepage_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\Cms\Index\Index"/>
+    </type>
+    <type name="Magento\Framework\App\Action\Action">
+        <plugin name="wmz_otherpage_login" sortOrder="10" type="WMZ\ForceLogin\Plugin\OtherPage"/>
+    </type>
+    <type name="Magento\Customer\Block\Form\Login\Info">
+        <plugin name="wmz_block_login_info" sortOrder="10"
+                type="WMZ\ForceLogin\Plugin\Block\Form\Login\Info"/>
+    </type>
+    <preference for="Magento\Customer\Controller\Account\Login" type="WMZ\ForceLogin\Controller\Account\Login"/>
+</config>

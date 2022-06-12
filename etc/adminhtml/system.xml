@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="forcelogin" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Force Login</label>
+            <tab>wmz</tab>
+            <resource>WMZ_ForceLogin::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1" canRestore="1">
+                <label>Enable/Disable Force Login on All Pages</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select "Yes" to Enable Force Login</comment>
+                </field>
+                <field id="disable_register" translate="label" type="select" sortOrder="2" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Disable Registration</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="page" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1"
+                   showInStore="1" canRestore="1">
+                <label>Enable/Disable Force Login on Specific Pages</label>
+                <field id="message" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Alert Message</label>
+                    <comment>The message is shown when users are redirected to the login page.</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="product_page" translate="label" type="select" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Product Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="category_page" translate="label" type="select" sortOrder="4" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Category Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Category Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="cart_page" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Cart Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Cart Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="checkout_page" translate="label" type="select" sortOrder="6" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Checkout Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Checkout Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="search_term_page" translate="label" type="select" sortOrder="7" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Search Term Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Search Term Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="advanced_search_page" translate="label" type="select" sortOrder="8" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Advanced Search Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Advance Search Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="search_results_page" translate="label" type="select" sortOrder="9" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Search Results Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Search Result Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="contact_page" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Contact Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Contact us Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="order_return" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Orders and Returns Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Orders and Returns Page</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="other_page" translate="label" type="select" sortOrder="11" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Other Pages</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on Custom Pages that are created by third-party extensions.
+                        (e.g., FAQs page)
+                    </comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="enable" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>CMS Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Force Login on CMS Pages</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="page_id" translate="label" type="multiselect" sortOrder="13" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Select CMS Page</label>
+                    <source_model>WMZ\ForceLogin\Model\Config\Source\CmsPage</source_model>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                        <field id="forcelogin/page/enable">1</field>
+                    </depends>
+                </field>
+                <field id="direct_access" translate="label" type="text" sortOrder="14" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Direct Access</label>
+                    <comment>Comma Separated Custom Links example: "frontname/controller/action".</comment>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="redirect" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1"
+                   showInStore="1" canRestore="1">
+                <label>After Login</label>
+                <field id="page" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Redirect To</label>
+                    <source_model>WMZ\ForceLogin\Model\Config\Source\RedirectPage</source_model>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                    </depends>
+                </field>
+                <field id="custom_url" type="text" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Custom Url</label>
+                    <depends>
+                        <field id="forcelogin/general/enable">1</field>
+                        <field id="forcelogin/redirect/page" separator=",">customerurl</field>
+                    </depends>
+                    <comment>example: "front-name/controller/action".</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

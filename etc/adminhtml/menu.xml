@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WMZ_ForceLogin::menu"
+             title="Force Login"
+             module="WMZ_ForceLogin"
+             sortOrder="50"
+             resource="WMZ_ForceLogin::menu"
+             parent="WMZ_Core::wmz"
+        />
+        <add id="WMZ_ForceLogin::configuration"
+             title="Configuration"
+             module="WMZ_ForceLogin"
+             sortOrder="10"
+             action="adminhtml/system_config/edit/section/forcelogin"
+             resource="WMZ_ForceLogin::config"
+             parent="WMZ_ForceLogin::menu"
+        />
+    </menu>
+</config>
